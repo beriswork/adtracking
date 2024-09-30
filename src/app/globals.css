@@ -1,27 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.bg-main {
+  --tw-bg-opacity: 1;
+  background-color: rgb(25 25 25 / var(--tw-bg-opacity)); /* This is #191919 in rgb */
 }
+
+.bg-sidebar {
+  --tw-bg-opacity: 1;
+  background-color: rgb(32 32 32 / var(--tw-bg-opacity)); /* This is #202020 in rgb */
+}
+
+/* Add this class with !important to ensure it overrides other classes */
+.bg-nav-bg {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(32 32 32 / var(--tw-bg-opacity)) !important;
+}
+
+/* Add the new bg-gray-800 class */
+.bg-gray-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(39 42 46 / var(--tw-bg-opacity));
+}
+
+/* Add this to remove increment/decrement arrows from number inputs */
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
